@@ -1,7 +1,8 @@
-from flask import Flask, request, Response
-
+from flask import Flask, request, Response, redirect, url_for, render_template
+from flask_bootstrap import Bootstrap 
 
 app = Flask(__name__)
+Bootstrap(app)
 
 
 @app.route('/')
@@ -9,9 +10,14 @@ def index():
     return "<a href='/posts'>Posts</a>"
 
 
+@app.route("/redirect")
+def redirect2():
+    return redirect(url_for("response"))
+
+
 @app.route("/response")
 def response():
-    return "Uma resposta do servidor"
+    return render_template("response.html")
 
 
 @app.route('/posts')

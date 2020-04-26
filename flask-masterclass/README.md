@@ -5,3 +5,7 @@
 # Execultar a aplicação
 
 ### (.flask-masterclass) PS C:\Users\NoteCasa\source\repos\PythonCurso\flask-masterclass\introducao> python .\app.py
+
+###  PS C:\Users\NoteCasa\source\repos\PythonCurso\flask-masterclass\02-database-manager> .\.venv\Scripts\Activate.ps1
+
+ pip install flask-bootstrap

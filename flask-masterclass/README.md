@@ -1,15 +1,48 @@
 # Comandos 
  cd .\.flask-masterclass\
-
+ 
 # Criar ambiente vitual
 .flask-masterclass> python -m venv .venv
+
 #### Ativando um projeto
  .\.venv\Scripts\Activate.ps1
+ 
 #### Desativa ambiente
 (.venv) ... pasta ... deactivate
 
+#### Remover o ambiente
+ rm -r .venv
+ 
 
+### Novo ambiente
+  python -m venv .flask-masterclass
+  
  .\Scripts\Activate.ps1   
+
+### Intalando o flask
+pip install flask
+
+### Atualizando o pip
+python -m pip install --upgrade pip
+
+### Criar variavel de ambiente no powerShell
+set FLASK_APP=app 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Execultar a aplicação
  (.flask-masterclass) PS C:\Users\meunote\source\repos\PythonCurso\flask-masterclass\introducao> python .\app.py

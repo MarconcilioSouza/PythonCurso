@@ -1,6 +1,15 @@
 # Comandos 
-PS C:\Users\*\source\repos\PythonCurso\flask-masterclass> cd .\.flask-masterclass\
-PS C:\Users\*\source\repos\PythonCurso\flask-masterclass\.flask-masterclass> .\Scripts\Activate.ps1   
+ cd .\.flask-masterclass\
+
+# Criar ambiente vitual
+.flask-masterclass> python -m venv .venv
+#### Ativando um projeto
+ .\.venv\Scripts\Activate.ps1
+#### Desativa ambiente
+(.venv) ... pasta ... deactivate
+
+
+ .\Scripts\Activate.ps1   
 
 # Execultar a aplicação
  (.flask-masterclass) PS C:\Users\meunote\source\repos\PythonCurso\flask-masterclass\introducao> python .\app.py

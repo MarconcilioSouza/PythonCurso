@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block conteudo %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="notification">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% for k, v in users.items() %}
+        <h1> {{ k }}  => {{ v }}</h1>
+    {% endfor %}
+{% endblock %} 

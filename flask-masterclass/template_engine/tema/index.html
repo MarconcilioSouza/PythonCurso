@@ -1,18 +1,13 @@
 {% extends "base.html" %}
+{% block subtitulo %} Index {% endblock %}
 
 {% block conteudo %}
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="notification">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+    {% include 'components/notification.html' %}
 
-    {% for k, v in users.items() %}
-        <h1> {{ k }}  => {{ v }}</h1>
-    {% endfor %}
-    
+    {% if user_page %}
+        <a href="{{ url_for('users')}}" class=lead>Usuário</a>
+    {% else %}
+        <p>Nenhuma página criada!</p>
+    {% endif %}
+
 {% endblock %} 

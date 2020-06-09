@@ -1,14 +1,15 @@
 {% extends "base.html" %}
-
+{% block subtitulo %} Usuários {% endblock %}
 
 {% block conteudo %}
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="notification">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+    {% include 'components/notification.html' %}
+
+    {% for user in users %}
+        <ul class="list-group list-group-flush mb-5 ">
+            <li class="list-group-item {{ 'bg-success' if user.active else 'bg-danger'}}">Nome =>  {{ user.name }}</li>
+            <li class="list-group-item">Idade => {{ user.idade }}</li>
+            <li class="list-group-item">E-mail => {{ user.email }}</li>
+        </ul>
+    {% endfor %}
+    
 {% endblock %} 

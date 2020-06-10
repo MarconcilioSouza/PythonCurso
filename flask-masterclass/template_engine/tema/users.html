@@ -1,15 +1,9 @@
 {% extends "base.html" %}
 {% block subtitulo %} Usuários {% endblock %}
 
-{% block conteudo %}
-    {% include 'components/notification.html' %}
+{% from 'components/user.html' import user_component %}
 
-    {% for user in users %}
-        <ul class="list-group list-group-flush mb-5 ">
-            <li class="list-group-item {{ 'bg-success' if user.active else 'bg-danger'}}">Nome =>  {{ user.name }}</li>
-            <li class="list-group-item">Idade => {{ user.idade }}</li>
-            <li class="list-group-item">E-mail => {{ user.email }}</li>
-        </ul>
-    {% endfor %}
-    
+{% block conteudo %}
+    {%  include 'components/notification.html' %}
+    {{ user_component(users) }}
 {% endblock %} 

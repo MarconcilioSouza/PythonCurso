@@ -45,4 +45,8 @@ set FLASK_APP=app
 ##Instalar o flask_login
 pip install flask-login==0.4.1   
 
+## criando o venv e intalando todas as bibiotecas
+python -m venv .refactory
+.\.refactory\Scripts\Activate.ps1
+pip install -r .\requirements.txt
 

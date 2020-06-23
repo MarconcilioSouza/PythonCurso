@@ -31,7 +31,15 @@
       </tr>
     </tbody>
   </table>
-</div>
 
+  <h2 class="text-muted">Books:</h2>
+  <ul class="list-group list-group-flush">
+    {% for book in user.books %}
+      <li class="list-group-item">
+        {{ book.name }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% endblock %}

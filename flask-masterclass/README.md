@@ -7,6 +7,7 @@
  pip install SQLAlchemy
  
  # Criar ambiente vitual
+ -- .venv => Nome do ambiente
 .flask-masterclass> python -m venv .venv
 
 #### Ativando um projeto
